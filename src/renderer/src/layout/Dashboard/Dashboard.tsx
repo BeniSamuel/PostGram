@@ -1,11 +1,11 @@
-import React, { ReactNode } from 'react'
-import DashCenter from './DashCenter'
-import DashLeft from './DashLeft'
-import DashRight from './DashRight'
+import React, { ReactNode } from "react";
+import DashCenter from "./DashCenter";
+import DashLeft from "./DashLeft";
+import DashRight from "./DashRight";
 
 type DashboardProps = {
-  children: ReactNode
-}
+  children: ReactNode;
+};
 
 const Dashboard: React.FC<DashboardProps> = ({ children }): JSX.Element => {
   return (
@@ -14,7 +14,7 @@ const Dashboard: React.FC<DashboardProps> = ({ children }): JSX.Element => {
       <DashCenter>{children}</DashCenter>
       <DashRight />
     </div>
-  )
-}
+  );
+};
 
-export default Dashboard
+export default Dashboard;
