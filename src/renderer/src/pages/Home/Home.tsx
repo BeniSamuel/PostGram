@@ -1,9 +1,14 @@
+import HomeStates from '@renderer/components/Home/Home'
+import Dashboard from '@renderer/layout/Dashboard/Dashboard'
+
 const Home = (): JSX.Element => {
   return (
-    <div>
-      <p className=" text-lg font-poppins bg-red-700">Home</p>
-    </div>
+    <Dashboard>
+      <div>
+        <HomeStates />
+      </div>
+    </Dashboard>
   )
 }
 
-export default Home;
+export default Home

@@ -4,9 +4,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        poppins: ['poppins', 'sans-serif']
+        poppins: ['Poppins', 'sans-serif'] // Ensure "Poppins" is capitalized correctly
       }
     }
   },
   plugins: []
-}
+};
