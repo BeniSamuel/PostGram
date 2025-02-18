@@ -17,10 +17,12 @@ const DashLeft = (): JSX.Element => {
 
   });
 
-  const handleNavigation = ( tab: string, route: string ) => {
-    setTab(tab);
+  const handleNavigation = ( tabN: string, route: string ):void => {
+    setTab(tabN);
     navigate(route);
   }
+
+
 
   return (
     <div className=" w-full md:w-[20%] bg-[#FFFFFF] px-8 py-4 flex flex-col gap-12 ">
@@ -29,31 +31,31 @@ const DashLeft = (): JSX.Element => {
       </div>
 
       <div className=" flex flex-col">
-        <div onClick={() => handleNavigation("home", "/")}>
+        <div onClick={() => handleNavigation("home", "/")} className={` ${ tab === "home" ? " bg-[#F7F7F7] rounded-md" : "" }`}>
           <img />
           <div className=" font-poppins text-sm font-medium hover:bg-[#F7F7F7] py-2 px-2 rounded-md cursor-pointer ">
             Home
           </div>
         </div>
-        <div onClick={() => handleNavigation("search", "/search")}>
+        <div onClick={() => handleNavigation("search", "/search")} className={` ${ tab === "search" ? " bg-[#F7F7F7] rounded-md" : "" }`}>
           <img />
           <div className=" font-poppins text-sm font-medium hover:bg-[#F7F7F7] py-2 px-2 rounded-md cursor-pointer ">
             Search
           </div>
         </div>
-        <div onClick={() => handleNavigation("notifications", "/notifications")}>
+        <div onClick={() => handleNavigation("notifications", "/notifications")} className={` ${ tab === "notifications" ? " bg-[#F7F7F7] rounded-md" : "" }`}>
           <img />
           <div className=" font-poppins text-sm font-medium hover:bg-[#F7F7F7] py-2 px-2 rounded-md cursor-pointer ">
             Notifications
           </div>
         </div>
-        <div onClick={() => handleNavigation("saved", "/savedPosts")}>
+        <div onClick={() => handleNavigation("saved", "/savedPosts")} className={` ${ tab === "saved" ? " bg-[#F7F7F7] rounded-md" : "" }`}>
           <img />
           <div className=" font-poppins text-sm font-medium hover:bg-[#F7F7F7] py-2 px-2 rounded-md cursor-pointer ">
             Saved Posts
           </div>
         </div>
-        <div onClick={() => handleNavigation("messages", "/messages")}>
+        <div onClick={() => handleNavigation("messages", "/messages")} className={` ${ tab === "messages" ? " bg-[#F7F7F7] rounded-md" : "" }`}>
           <img />
           <div className=" font-poppins text-sm font-medium hover:bg-[#F7F7F7] py-2 px-2 rounded-md cursor-pointer ">
             Messages
